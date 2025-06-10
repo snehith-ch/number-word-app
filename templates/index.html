@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Word Converter</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number to Word Converter</h1>
+        <form method="POST" action="/">
+            <label for="number">Enter a number:</label>
+            <input type="text" id="number" name="number" placeholder="e.g., 12345" required>
+            <button type="submit">Convert</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <h2>Conversion Result:</h2>
+            <pre>{{ result }}</pre> <!-- Use <pre> to preserve newlines -->
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
